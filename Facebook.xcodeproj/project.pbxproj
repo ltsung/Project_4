@@ -21,6 +21,7 @@
 		F7929AC419B9339000D3F64D /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7929AC319B9339000D3F64D /* NewsFeedViewController.swift */; };
 		F7929AC819B933B100D3F64D /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7929AC719B933B100D3F64D /* NotificationsViewController.swift */; };
 		F7929ACC19B933C700D3F64D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7929ACB19B933C700D3F64D /* MoreViewController.swift */; };
+		F7C469A119D75B030058E302 /* FeedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C469A019D75B030058E302 /* FeedPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F7929AC319B9339000D3F64D /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		F7929AC719B933B100D3F64D /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		F7929ACB19B933C700D3F64D /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		F7C469A019D75B030058E302 /* FeedPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				F759A50619BD1CA200021ADC /* StatusViewController.swift */,
 				F759A50819BD1CB600021ADC /* PhotoViewController.swift */,
 				F759A50A19BD1CBF00021ADC /* CheckInViewController.swift */,
+				F7C469A019D75B030058E302 /* FeedPhotoViewController.swift */,
 			);
 			path = Facebook;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				F7929AA719B9299D00D3F64D /* AppDelegate.swift in Sources */,
 				F759A50719BD1CA200021ADC /* StatusViewController.swift in Sources */,
 				F7929AC419B9339000D3F64D /* NewsFeedViewController.swift in Sources */,
+				F7C469A119D75B030058E302 /* FeedPhotoViewController.swift in Sources */,
 				F759A50B19BD1CBF00021ADC /* CheckInViewController.swift in Sources */,
 				F759A50919BD1CB600021ADC /* PhotoViewController.swift in Sources */,
 			);

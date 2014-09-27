@@ -1,25 +1,25 @@
 //
-//  NewsFeedViewController.swift
+//  FeedPhotoViewController.swift
 //  Facebook
 //
-//  Created by Lauren Tsung on 9/4/14.
+//  Created by Lauren Tsung on 9/27/14.
 //  Copyright (c) 2014 Y.CORP.YAHOO.COM\ltsung. All rights reserved.
 //
 
 import UIKit
 
-class NewsFeedViewController: UIViewController {
+class FeedPhotoViewController: UIViewController {
+
+    var image: UIImage!
     
-    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var examplePhoto: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scrollView.contentSize = CGSizeMake(320, 2160)
+
+        // Do any additional setup after loading the view.
+        imageView.image = image
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,20 +27,10 @@ class NewsFeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func dismissViewController(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
-    
-    @IBAction func tappedPhoto(sender: UITapGestureRecognizer) {
-        println("tapped photo")
-        performSegueWithIdentifier("photoView", sender: self)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        var destinationViewController = segue.destinationViewController as FeedPhotoViewController
-        
-        destinationViewController.image = self.examplePhoto.image
-        
-    }
-    
     /*
     // MARK: - Navigation
 

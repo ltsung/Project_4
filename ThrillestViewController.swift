@@ -25,10 +25,10 @@ class ThrillestViewController: UIViewController {
     }
     
  
-    @IBAction func goToFeed(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func dismissThrillest(sender: AnyObject) {
+        println("hit")
+        self.navigationController?.popViewControllerAnimated(true)
     }
-
    
     @IBAction func onLikeButton(sender: AnyObject) {
         likeButton.selected = !likeButton.selected
