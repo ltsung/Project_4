@@ -46,12 +46,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_actions" id="cql-gu-5eo">
-                                <rect key="frame" x="0.0" y="533" width="280" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DuV-5L-whP">
+                                <rect key="frame" x="0.0" y="51" width="320" height="478"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yDq-bf-Riy">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="478"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="l2B-VF-Wap">
-                                <rect key="frame" x="263" y="19" width="51" height="27"/>
+                                <rect key="frame" x="263" y="16" width="51" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="doneButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,21 +66,19 @@
                                     <action selector="dismissViewController:" destination="mcA-l4-CnJ" eventType="touchUpInside" id="9ce-8d-LgX"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DuV-5L-whP">
-                                <rect key="frame" x="0.0" y="51" width="320" height="478"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yDq-bf-Riy">
-                                        <rect key="frame" x="0.0" y="-5" width="320" height="492"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_actions" id="cql-gu-5eo">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="actionButtons" destination="cql-gu-5eo" id="vz7-AY-5VJ"/>
+                        <outlet property="doneButton" destination="l2B-VF-Wap" id="6hQ-OW-xXo"/>
                         <outlet property="imageView" destination="yDq-bf-Riy" id="w2d-8r-VOo"/>
+                        <outlet property="scrollView" destination="DuV-5L-whP" id="xTi-8C-gh1"/>
+                        <outlet property="theView" destination="NQk-Eo-ZL2" id="BFk-kv-Qb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngf-So-fnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -361,7 +365,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="lRn-Nb-kfG" kind="modal" id="sCm-DK-524"/>
+                                    <segue destination="lRn-Nb-kfG" kind="modal" identifier="statusSegue" id="sCm-DK-524"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kJD-4l-Djv">
@@ -371,7 +375,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="I46-2J-9x7" kind="modal" id="srz-iw-E0Y"/>
+                                    <segue destination="I46-2J-9x7" kind="modal" identifier="cameraSegue" id="srz-iw-E0Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n7e-Zc-JC2">
@@ -381,7 +385,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gib-nE-V3u" kind="modal" id="V35-DZ-eNC"/>
+                                    <segue destination="Gib-nE-V3u" kind="modal" identifier="checkinSegue" id="V35-DZ-eNC"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BKg-e4-GPx">
@@ -402,12 +406,12 @@
                                             <segue destination="lG2-g4-c8M" kind="push" id="ynR-3p-RNt"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding3" id="lmb-Ak-ey9">
-                                        <rect key="frame" x="161" y="81" width="159" height="104"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding1" id="koZ-Cv-fnT">
+                                        <rect key="frame" x="4" y="81" width="154" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="2iQ-Cf-VB7" appends="YES" id="wxR-Wu-jRl"/>
+                                            <outletCollection property="gestureRecognizers" destination="t7s-er-5BI" appends="YES" id="CdM-vh-fjh"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding2" id="xJz-YV-gHK">
@@ -434,12 +438,12 @@
                                             <outletCollection property="gestureRecognizers" destination="iKl-jc-Ixx" appends="YES" id="beu-Ny-iYV"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding1" id="koZ-Cv-fnT">
-                                        <rect key="frame" x="4" y="81" width="154" height="157"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding3" id="lmb-Ak-ey9">
+                                        <rect key="frame" x="161" y="81" width="159" height="104"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="t7s-er-5BI" appends="YES" id="CdM-vh-fjh"/>
+                                            <outletCollection property="gestureRecognizers" destination="2iQ-Cf-VB7" appends="YES" id="wxR-Wu-jRl"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
