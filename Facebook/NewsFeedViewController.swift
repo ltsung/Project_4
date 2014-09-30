@@ -91,9 +91,6 @@ class NewsFeedViewController: UIViewController, UIViewControllerTransitioningDel
             
             window.addSubview(tempImageView)
             self.examplePhoto.hidden = true
-       
-            
-           
             
             
             UIView.animateWithDuration(0.5, animations: { () -> Void in

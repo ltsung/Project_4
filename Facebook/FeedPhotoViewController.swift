@@ -77,6 +77,7 @@ class FeedPhotoViewController: UIViewController, UIScrollViewDelegate {
             
       
         println("content offset \(scrollView.contentOffset.y)")
+            
         
         if (scrollView.contentOffset.y < -100) {
             println("Dismiss me")
